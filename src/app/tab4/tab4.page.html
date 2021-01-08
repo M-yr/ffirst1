@@ -1,8 +1,14 @@
 <ion-header [translucent]="true"> <!--translucent 는 반투명 탭을 의미한다. -->
-  <ion-toolbar>
-    <ion-title>
-      내정보 화면
-    </ion-title>
+  
+  <ion-toolbar> 
+    <div class="header_color">
+
+      <ion-segment (ionChange)="segmentChanged($event)"> <!-- 같은 라인에 포함된 태그들을 출력시켜준다. -->
+        <ion-title>SchoolCode</ion-title>
+        <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" animated></ion-searchbar>
+      </ion-segment>
+      
+    </div>
   </ion-toolbar>
 </ion-header>
 

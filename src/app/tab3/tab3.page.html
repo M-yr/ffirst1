@@ -1,17 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header [translucent]="true"> <!--translucent 는 반투명 탭을 의미한다. -->
+  
+  <ion-toolbar> 
+    <div class="header_color">
+
+      <ion-segment (ionChange)="segmentChanged($event)"> <!-- 같은 라인에 포함된 태그들을 출력시켜준다. -->
+        <ion-title>SchoolCode</ion-title>
+        <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" animated></ion-searchbar>
+      </ion-segment>
+      
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div>
+    <h2 class="center_container1">시간표 등록</h2>
+  </div>
 </ion-content>
