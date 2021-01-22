@@ -1,0 +1,171 @@
+<ion-header [translucent]="true"> <!--translucent 는 반투명 탭을 의미한다. -->
+  
+  <ion-toolbar> 
+    <div class="header_color">
+
+      <ion-segment (ionChange)="segmentChanged($event)"> <!-- 같은 라인에 포함된 태그들을 출력시켜준다. -->
+        <ion-title>SchoolCode</ion-title>
+        <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel" animated></ion-searchbar>
+      </ion-segment>
+      
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">  <!--컨테이너 안에다가 집어넣어야 html 화면에 나온다. -->
+    <div class="center_container1">
+      <h1>성결 고등학교</h1>
+    </div> 
+
+    <ion-card>
+      <ion-item>
+        <ion-label>새로운 알림 뜨는 곳</ion-label>
+        <ion-button fill="outline" slot="end" color="warning">자세히 보기</ion-button>
+      </ion-item>
+    
+      <ion-card-content>
+        <ion-list>
+          <ion-item-sliding>
+            <ion-item>
+              <ion-label>김도윤 학생이 등교하였습니다</ion-label>
+            </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        
+          <ion-item-sliding>
+            <ion-item>
+              <ion-label>김도윤 학생이 하교하였습니다</ion-label>
+            </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-item>
+        <ion-label>선생님 사진 자리</ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+        선생님 정보
+      </ion-card-content>
+    </ion-card>
+
+    
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-card class="cardback_fit">
+        <ion-item>
+          <ion-label>오늘의 급식</ion-label>
+        </ion-item>
+       
+        <ion-card-content>
+          <ion-button fill="outline" slot="end" class="ion-activated" color="warning">급식표</ion-button>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                월
+              </ion-col>
+              <ion-col>
+                화
+              </ion-col>
+              <ion-col>
+                수
+              </ion-col>
+              <ion-col>
+                목
+              </ion-col>
+              <ion-col>
+                금
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                월
+              </ion-col>
+              <ion-col>
+                화
+              </ion-col>
+              <ion-col>
+                수
+              </ion-col>
+              <ion-col>
+                목
+              </ion-col>
+              <ion-col>
+                금
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                월
+              </ion-col>
+              <ion-col>
+                화
+              </ion-col>
+              <ion-col>
+                수
+              </ion-col>
+              <ion-col>
+                목
+              </ion-col>
+              <ion-col>
+                금
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                월
+              </ion-col>
+              <ion-col>
+                화
+              </ion-col>
+              <ion-col>
+                수
+              </ion-col>
+              <ion-col>
+                목
+              </ion-col>
+              <ion-col>
+                금
+              </ion-col>
+            </ion-row>
+            
+
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="cardback_fit"> <!--card 태그의 백그라운드 크기를 조절하기위한 클래스 , scss 파일에서 수정 가능 -->
+        <ion-item>
+          <ion-label>1반 자유게시판</ion-label>
+          
+        </ion-item>
+      
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label>내일 시험 뭐야?</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>오늘 밤샐 사람</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>난 잔다</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>제발 시험 잘보게 해주세요</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-segment>
+
+</ion-content>
+
